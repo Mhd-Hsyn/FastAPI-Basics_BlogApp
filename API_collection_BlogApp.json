@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "93884867-5cd4-4945-97c3-71e4d56150b4",
+		"name": "Practice Home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28511271",
+		"_collection_link": "https://interstellar-resonance-814138.postman.co/workspace/Home~97aaf852-3708-462e-9855-53210324b25d/collection/28511271-93884867-5cd4-4945-97c3-71e4d56150b4?action=share&source=collection_link&creator=28511271"
+	},
+	"item": [
+		{
+			"name": "FastAPI_home_task2",
+			"item": [
+				{
+					"name": "Home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Path Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog/get-blog/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"get-blog",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog/?limit=10&published=True&sort=latest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "published",
+									"value": "True"
+								},
+								{
+									"key": "sort",
+									"value": "latest"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Both Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog/1/comment?limit=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"1",
+								"comment"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Blog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"PAK Studies Blog\",\n    \"content\": \"hello ASIM MUNEER . . . \"\n}\n\n// {\n//     \"title\": \"History Blog\",\n//     \"content\": \"hello world . . . \",\n//     \"published\": true\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/blog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All Blog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Blog by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"title\": \"History Blog\",\n    \"content\": \"hello worldzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz . . . \",\n    \"published\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/blog/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All Blog Response Model",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog/blogs-resp-model/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"blogs-resp-model",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET single Blog Response Model",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/blog/blogs-resp-model/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"blogs-resp-model",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sigup user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"abc\",\n    \"email\": \"qabc@gmail.com\",\n    \"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/user/user-signup/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"user",
+								"user-signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user-by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/user/get-user-by_id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"user",
+								"get-user-by_id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Blog with-USER-relation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"PAK Studies Blog\",\n    \"content\": \"hello ASIM MUNEER . . . \"\n}\n\n// {\n//     \"title\": \"History Blog\",\n//     \"content\": \"hello world . . . \",\n//     \"published\": true\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/blog/blog-with-relation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"blog-with-relation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-blog-with-relation/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"PAK Studies Blog\",\n    \"content\": \"hello ASIM MUNEER . . . \"\n}\n\n// {\n//     \"title\": \"History Blog\",\n//     \"content\": \"hello world . . . \",\n//     \"published\": true\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/blog/get-blog-with-relation/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"blog",
+								"get-blog-with-relation",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
